@@ -18,7 +18,10 @@ namespace CmdTools{
 /   inputs need to be initialized because their value is not
 /   assigned if no option is parsed. Example initialization:
 /
-/    CmdTools::CmdParser argParser("CmdParserTest [options] [values]",
+/    CmdTools::CmdParser argParser("CmdParserTest [options] [values]\n"
+/                        " return codes:\n"
+/                        " 0 Success\n"
+/                        " 1 Failure",
 /                        "-str",    "%s", &str1,    "pass a string",
 /                        "-int",    "%d", &int1,    "pass an int",
 /                        "-double", "%f", &double1, "pass a double",
