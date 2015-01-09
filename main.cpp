@@ -18,8 +18,8 @@ int main(int argc, char* argv[])
     // Create a parsing object and set an option of each type
     CmdTools::CmdParser argParser("CmdParserTest [options] [values]\n"
                         " return codes:\n"
-                        " 0 Success\n"
-                        " 1 Failure",
+                        " \t0 Success\n"
+                        " \t1 Failure",
                         "-str",    "%s", &str1,    "pass a string",
                         "-int",    "%d", &int1,    "pass an int",
                         "-double", "%f", &double1, "pass a double",
@@ -44,14 +44,16 @@ int main(int argc, char* argv[])
     // output the variables set by the command line options
     //  Note that if no option was passed the output is the
     //  initialization value.
-    std::cout << str1 << " " << int1 << " "<< double1;
+    std::cout << "-str option passed in " << str1;
+    std::cout << "\n-int option passed in " << int1;
+    std::cout << "\n-double option passed in "<< double1;
     if (bool1)
-        std::cout << " true\n";
+        std::cout << "\n-bool flag was set\n";
     else
         std::cout << "\n";
-
+    
     for (size_t i = 0; i < extraArgs.size(); ++i)
-        std::cout << extraArgs[i] << " ";
+        std::cout << "Extra argument "<< i <<" : "<<extraArgs[i] << "\n";
 
     std::cout << std::endl;
 
