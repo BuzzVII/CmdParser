@@ -81,7 +81,7 @@ class CmdParser
         std::map<std::string, char*> m_type;
         std::vector<std::string>     m_helpString;
         std::string m_usage;
-        bool m_help = false;
+        bool m_help;
 };
 
 }

@@ -6,7 +6,7 @@
 
 namespace CmdTools{
 CmdParser::CmdParser(const char* usage...):
-    m_usage(usage)
+    m_usage(usage), m_help(false)
 {
     va_list args;
     va_start(args, usage);
